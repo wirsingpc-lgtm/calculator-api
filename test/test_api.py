@@ -8,7 +8,7 @@ def test_read_main():
     """Prueba que el endpoint raíz responda correctamente"""
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"message": "API Calculadora UPANA"}
+    assert response.json() == {"message": "API Calculadora"}
 
 def test_sum():
     """Prueba la funcionalidad de suma con parámetros válidos"""
