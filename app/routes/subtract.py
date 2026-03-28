@@ -1,12 +1,7 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 
 router = APIRouter()
 
 @router.get("/subtract")
-def calculate_subtract(num1: float, num2: float):
-    return {
-        "operation": "subtract",
-        "num1": num1,
-        "num2": num2,
-        "result": num1 - num2
-    }
+def subtract(num1: float, num2: float):
+    return {"operation": "subtract", "result": num1 - num2}

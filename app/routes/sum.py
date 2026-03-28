@@ -1,12 +1,7 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 
 router = APIRouter()
 
 @router.get("/sum")
-def calculate_sum(num1: float, num2: float):
-    return {
-        "operation": "sum",
-        "num1": num1,
-        "num2": num2,
-        "result": num1 + num2
-    }
+def sum(num1: float, num2: float):
+    return {"operation": "sum", "result": num1 + num2}
